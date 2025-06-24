@@ -1,0 +1,6 @@
+# Configurações básicas do site
+theme: jekyll-theme-minimal
+title: RS Contadores Associados LTDA 
+description: Página da empresa de consultoria contábil RS CONTADORES!
+url: "https://rscontadores.github.io"  
+baseurl: ""  
