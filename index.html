@@ -12,37 +12,54 @@
       max-width: 900px;
       margin: 0 auto;
       padding: 40px 20px;
-      background-color: #f8f9fa; /* Esta cor clara de fundo foi mantida */
       color: #333;
       line-height: 1.6;
+      position: relative; 
+      z-index: 1; 
+    }
+
+    body::before {
+        content: '';
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; 
+        
+        background-image: url('fundocontabilidade.jpg');
+        background-size: cover;
+        background-position: center;
+        
+        box-shadow: inset 0 0 0 1000px rgba(29, 53, 87, 0.88); 
     }
 
     h1, h2, h3 {
-      color: #1d3557; /* COR ALTERADA - Um azul marinho mais profundo e elegante */
+      color: #1d3557;
     }
     
     h2 {
-      border-bottom: 2px solid #2a9d8f; /* COR ALTERADA - O novo verde-azulado como destaque */
+      border-bottom: 2px solid #2a9d8f;
       padding-bottom: 5px;
       margin-top: 40px;
     }
 
     a {
-      color: #2a9d8f; /* COR ALTERADA - O novo verde-azulado para links */
+      color: #2a9d8f;
       text-decoration: none;
       transition: color 0.3s;
     }
 
     a:hover {
       text-decoration: underline;
-      color: #248a7e; /* COR ALTERADA - Um tom mais escuro do verde-azulado para o hover */
+      color: #248a7e;
     }
 
     section {
       background-color: #fff;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
       margin-bottom: 20px;
     }
 
@@ -52,16 +69,30 @@
       margin-bottom: 40px;
       border-bottom: 1px solid #ddd;
       padding-bottom: 10px;
+      background-color: #fff; 
+      padding-top: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
+
+    /* ESTILO ALTERADO PARA OS BOTÕES */
     nav a {
-      margin: 0 15px;
+      display: inline-block; /* NOVO: Essencial para aplicar padding corretamente */
+      margin: 0 10px; /* ALTERADO: Ajuste de margem */
+      padding: 8px 18px; /* NOVO: Espaçamento interno para criar o formato do botão */
+      border-radius: 20px; /* NOVO: Deixa as bordas totalmente arredondadas */
       font-weight: bold;
       font-size: 1.1em;
       text-decoration: none;
-      color: #1d3557; /* COR ALTERADA - Usando o azul marinho para o texto do menu */
+      color: #1d3557;
+      background-color: transparent; /* NOVO: Fundo transparente no estado normal */
+      transition: background-color 0.3s, color 0.3s; /* NOVO: Animação suave na transição */
     }
+    
+    /* EFEITO AO PASSAR O MOUSE */
     nav a:hover {
-        color: #2a9d8f; /* COR ALTERADA - Destaque em verde-azulado no hover */
+        color: #fff; /* ALTERADO: Cor do texto fica branca */
+        background-color: #2a9d8f; /* ALTERADO: Fundo é preenchido com a cor de destaque */
         text-decoration: none;
     }
 
@@ -74,7 +105,7 @@
       background-color: #fff;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
     .profile img {
       max-width: 200px;
@@ -100,7 +131,7 @@
       background-color: #f8f9fa;
       padding: 20px;
       border-radius: 8px;
-      border-left: 4px solid #2a9d8f; /* COR ALTERADA - Borda de destaque com o verde-azulado */
+      border-left: 4px solid #2a9d8f;
     }
     .servico-item h3 {
       margin-top: 0;
@@ -126,6 +157,9 @@
 
     /* REGRAS PARA TELAS PEQUENAS (DESIGN RESPONSIVO) */
     @media (max-width: 650px) {
+      body {
+        padding: 20px 10px; 
+      }
       .profile {
         flex-direction: column; 
         text-align: center;   
@@ -136,8 +170,10 @@
       .profile-info h1 {
         font-size: 1.8em; 
       }
+      /* Ajuste fino nos botões para celular */
       nav a {
-        margin: 0 8px; 
+        margin: 0 2px;
+        padding: 6px 12px;
         font-size: 1em;
       }
     }
@@ -176,11 +212,11 @@
       <div class="servicos-grid">
         <div class="servico-item">
           <h3>Assessoria Contábil e Fiscal</h3>
-          <p>Escrituração completa, apuração de impostos e entrega de obrigações acessórias (SPED, DCTF, MIT).</p>
+          <p>Escrituração completa, apuração de impostos e entrega de obrigações acessórias (SPED, DCTF).</p>
         </div>
         <div class="servico-item">
           <h3>Departamento Pessoal</h3>
-          <p>Gestão de folha de pagamento, pró-labore, eSocial, FGTS Digital, DCTFWeb e todas as rotinas trabalhistas.</p>
+          <p>Gestão de folha de pagamento, pró-labore, eSocial e todas as rotinas trabalhistas.</p>
         </div>
         <div class="servico-item">
           <h3>Abertura e Legalização de Empresas</h3>
@@ -204,7 +240,7 @@
         <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rs-contadores-associados-ltda-452a23370/" target="_blank">RS Contadores</a></li>
       </ul>
       
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.773782161298!2d-34.90809232408369!3d-8.1245052817478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1f95a0e5b7cb%3A0x7c735a6f20c4516c!2sAv.%20Pinheiros%2C%20473%20-%20Imbiribeira%2C%20Recife%20-%20PE%2C%2051170-130!5e0!3m2!1spt-BR!2sbr!4v1719270030588!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.771285874291!2d-34.9077553240212!3d-8.12520848202574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1f95d52c776b%3A0x69a7153725b39920!2sAv.%20Pinheiros%2C%20473%20-%20Imbiribeira%2C%20Recife%20-%20PE%2C%2051170-130!5e0!3m2!1spt-BR!2sbr!4v1719272338661!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   </main>
 
