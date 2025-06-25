@@ -4,180 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RS Contadores - Contabilidade em Recife</title>
-  
-  <style>
-    /* ESTILOS GERAIS */
-    body {
-      font-family: 'Arial', sans-serif;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      color: #333;
-      line-height: 1.6;
-      position: relative; 
-      z-index: 1; 
-    }
-
-    body::before {
-        content: '';
-        position: fixed; 
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1; 
-        
-        background-image: url('fundocontabilidade.jpg');
-        background-size: cover;
-        background-position: center;
-        
-        box-shadow: inset 0 0 0 1000px rgba(29, 53, 87, 0.88); 
-    }
-
-    h1, h2, h3 {
-      color: #1d3557;
-    }
-    
-    h2 {
-      border-bottom: 2px solid #2a9d8f;
-      padding-bottom: 5px;
-      margin-top: 40px;
-    }
-
-    a {
-      color: #2a9d8f;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    a:hover {
-      text-decoration: underline;
-      color: #248a7e;
-    }
-
-    section {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-      margin-bottom: 20px;
-    }
-
-    /* NAVEGAÇÃO */
-    nav {
-      text-align: center;
-      margin-bottom: 40px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 10px;
-      background-color: #fff; 
-      padding-top: 10px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    /* ESTILO ALTERADO PARA OS BOTÕES */
-    nav a {
-      display: inline-block; /* NOVO: Essencial para aplicar padding corretamente */
-      margin: 0 10px; /* ALTERADO: Ajuste de margem */
-      padding: 8px 18px; /* NOVO: Espaçamento interno para criar o formato do botão */
-      border-radius: 20px; /* NOVO: Deixa as bordas totalmente arredondadas */
-      font-weight: bold;
-      font-size: 1.1em;
-      text-decoration: none;
-      color: #1d3557;
-      background-color: transparent; /* NOVO: Fundo transparente no estado normal */
-      transition: background-color 0.3s, color 0.3s; /* NOVO: Animação suave na transição */
-    }
-    
-    /* EFEITO AO PASSAR O MOUSE */
-    nav a:hover {
-        color: #fff; /* ALTERADO: Cor do texto fica branca */
-        background-color: #2a9d8f; /* ALTERADO: Fundo é preenchido com a cor de destaque */
-        text-decoration: none;
-    }
-
-    /* SEÇÃO DE APRESENTAÇÃO (HOME) */
-    .profile {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      margin-bottom: 40px;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-    .profile img {
-      max-width: 200px;
-      border-radius: 10px;
-    }
-    .profile-info h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    .profile-info p {
-      margin: 5px 0;
-      color: #555;
-    }
-    
-    /* SEÇÃO DE SERVIÇOS */
-    .servicos-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .servico-item {
-      background-color: #f8f9fa;
-      padding: 20px;
-      border-radius: 8px;
-      border-left: 4px solid #2a9d8f;
-    }
-    .servico-item h3 {
-      margin-top: 0;
-    }
-
-    /* SEÇÃO DE CONTATO */
-    .contato-info {
-      list-style: none;
-      padding: 0;
-    }
-    .contato-info li {
-      margin-bottom: 10px;
-      font-size: 1.1em;
-    }
-
-    #contato iframe {
-        width: 100%;
-        height: 350px;
-        border-radius: 8px;
-        border: 0;
-        margin-top: 25px;
-    }
-
-    /* REGRAS PARA TELAS PEQUENAS (DESIGN RESPONSIVO) */
-    @media (max-width: 650px) {
-      body {
-        padding: 20px 10px; 
-      }
-      .profile {
-        flex-direction: column; 
-        text-align: center;   
-      }
-      .profile img {
-        margin-bottom: 20px; 
-      }
-      .profile-info h1 {
-        font-size: 1.8em; 
-      }
-      /* Ajuste fino nos botões para celular */
-      nav a {
-        margin: 0 2px;
-        padding: 6px 12px;
-        font-size: 1em;
-      }
-    }
-  </style>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -185,6 +16,7 @@
     <a href="#home">Início</a>
     <a href="#sobre">Sobre Nós</a>
     <a href="#servicos">Serviços</a>
+    <a href="#diferenciais">Diferenciais</a>
     <a href="#contato">Contato</a>
   </nav>
 
@@ -212,11 +44,11 @@
       <div class="servicos-grid">
         <div class="servico-item">
           <h3>Assessoria Contábil e Fiscal</h3>
-          <p>Escrituração completa, apuração de impostos e entrega de obrigações acessórias (SPED, DCTF).</p>
+          <p>Escrituração completa, apuração de impostos e entrega de obrigações acessórias (SPED, DCTF, MIT, EFD-Reinf).</p>
         </div>
         <div class="servico-item">
           <h3>Departamento Pessoal</h3>
-          <p>Gestão de folha de pagamento, pró-labore, eSocial e todas as rotinas trabalhistas.</p>
+          <p>Gestão de folha de pagamento, pró-labore, eSocial, DCTFWeb, FGTS Digital e todas as rotinas trabalhistas.</p>
         </div>
         <div class="servico-item">
           <h3>Abertura e Legalização de Empresas</h3>
@@ -229,20 +61,48 @@
       </div>
     </section>
 
+    <section id="diferenciais">
+        <h2>Por que Escolher a RS Contadores?</h2>
+        <div class="diferenciais-grid">
+            <div class="diferencial-item">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>+20 Anos de Experiência</h3>
+                <p>Tradição e profundo conhecimento para guiar sua empresa com segurança.</p>
+            </div>
+            <div class="diferencial-item">
+                <i class="fas fa-users"></i>
+                <h3>Atendimento Humanizado</h3>
+                <p>Tratamos cada cliente como único, entendendo suas dores para oferecer soluções personalizadas.</p>
+            </div>
+            <div class="diferencial-item">
+                <i class="fas fa-chart-line"></i>
+                <h3>Foco em Resultados</h3>
+                <p>Especialistas em planejamento tributário e benefícios fiscais para maximizar seus lucros.</p>
+            </div>
+            <div class="diferencial-item">
+                <i class="fas fa-cloud"></i>
+                <h3>Contabilidade Digital e Ágil</h3>
+                <p>Processos modernos e tecnológicos para sua comodidade e eficiência.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="contato">
-      <h2>Entre em Contato</h2>
-      <p>Será um prazer entender suas necessidades e oferecer a melhor solução para sua empresa. Fale conosco ou venha nos visitar!</p>
+      <h2>Pronto para Levar sua Empresa ao Próximo Nível?</h2>
+      <p>Fale com nossos especialistas hoje mesmo. Estamos prontos para oferecer um diagnóstico e a solução contábil ideal para o seu negócio.</p>
       
       <ul class="contato-info">
-        <li><strong>E-mail:</strong> <a href="mailto:rscontadores@rscontadorespe.com">rscontadores@rscontadorespe.com</a></li>
-        <li><strong>Telefone - WhatsApp:</strong> <a href="https://wa.me/5581999988548" target="_blank">(81) 99998-8548</a></li> 
-        <li><strong>Endereço:</strong> Avenida Pinheiros, 473, Imbiribeira, Recife - PE</li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rs-contadores-associados-ltda-452a23370/" target="_blank">RS Contadores</a></li>
+        <li><i class="fas fa-envelope"></i><strong>  E-mail:</strong> <a href="mailto:rscontadores@rscontadorespe.com">rscontadores@rscontadorespe.com</a></li>
+        <li><i class="fab fa-whatsapp"></i><strong>  Telefone - WhatsApp:</strong> <a href="https://wa.me/5581999988548" target="_blank">(81) 99998-8548</a></li> 
+        <li><i class="fas fa-map-marker-alt"></i><strong>  Endereço:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Avenida+Pinheiros,+473,+sala+05,+Imbiribeira,+Recife+-+PE" target="_blank" rel="noopener noreferrer">Avenida Pinheiros, 473, sala 05, Imbiribeira, Recife - PE</a></li>
+        <li><i class="fab fa-linkedin"></i><strong>  LinkedIn:</strong> <a href="https://www.linkedin.com/in/rs-contadores-associados-ltda-452a23370/" target="_blank">RS Contadores</a></li>
       </ul>
       
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.771285874291!2d-34.9077553240212!3d-8.12520848202574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1f95d52c776b%3A0x69a7153725b39920!2sAv.%20Pinheiros%2C%20473%20-%20Imbiribeira%2C%20Recife%20-%20PE%2C%2051170-130!5e0!3m2!1spt-BR!2sbr!4v1719272338661!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.771285874291!2d-34.9077553240212!3d-8.12520848202574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1f95d52c776b%3A0x69a7153725b39920!2sAv.%20Pinheiros%2C%20473%20-%20Imbiribeira%2C%20Recife%20-%20PE%2C%2051170-130!5e0!3m2!1spt-BR!2sbr!4v1719272338661!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa da localização do escritório RS Contadores"></iframe>
     </section>
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" integrity="sha512-u3fPA7V8qQmhBPNT5qu9CVJHRCsyElUF_AqrquZDNiAUwYbYGM1GuGcC3TNLbCvEokLQqV+xAC/D9OSAில்லி" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </body>
 </html>
