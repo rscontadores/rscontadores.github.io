@@ -32,24 +32,13 @@ h1, h2, h3 {
 
 h2 {
   border-bottom: 2px solid #2a9d8f;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   margin-top: 40px;
-  text-align: center; 
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  display: inline-block; 
-  width: auto;
+  margin-bottom: 20px;
+  display: block;
+  width: 100%;
+  text-align: left;
 }
-
-/* Centralizador de títulos */
-section h2 {
-    display: block; 
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px; 
-    padding-right: 20px;
-}
-
 
 a {
   color: #2a9d8f;
@@ -62,13 +51,19 @@ a:hover {
   color: #248a7e;
 }
 
-section {
+section, footer {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
   margin-bottom: 20px;
 }
+footer section {
+    margin-bottom: 0;
+    padding: 0; 
+    box-shadow: none; 
+}
+
 
 /* NAVEGAÇÃO */
 nav {
@@ -145,22 +140,35 @@ nav a:hover {
   list-style: none;
   padding: 0;
   text-align: left;
-  max-width: 400px;
-  margin: 20px auto 0 auto;
+  max-width: 550px;
+  margin: 20px 0 0 0;
 }
 .contato-info li {
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
   font-size: 1.1em;
 }
+.contato-info i {
+    font-size: 1.2em;
+    color: #2a9d8f;
+    margin-right: 18px;
+    width: 25px;
+    text-align: center;
+}
+.contato-info strong {
+    margin-right: 8px; 
+}
 
-#contato iframe {
+
+footer iframe {
     width: 100%;
     height: 350px;
     border-radius: 8px;
     border: 0;
     margin-top: 25px;
 }
-#contato p {
+footer p {
     text-align: center;
 }
 
@@ -187,15 +195,31 @@ nav a:hover {
     padding: 6px 10px;
     font-size: 0.9em;
   }
+  .diferenciais-grid {
+    grid-template-columns: 1fr; /* Coluna única no celular */
+  }
 }
 
-/* ESTILOS PARA A SEÇÃO DE DIFERENCIAIS */
+/* ESTILOS PARA A SEÇÃO DE DIFERENCIAIS - ATUALIZADO */
 .diferenciais-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 25px;
     margin-top: 30px;
     text-align: center;
+}
+
+.diferencial-item {
+    background-color: #f8f9fa; /* Fundo cinza claro, igual aos serviços */
+    padding: 25px 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    border-top: 4px solid #2a9d8f; /* Borda de destaque no topo */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animação suave */
+}
+
+.diferencial-item:hover {
+    transform: translateY(-5px); /* Efeito de "flutuar" */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Sombra mais pronunciada */
 }
 
 .diferencial-item i {
