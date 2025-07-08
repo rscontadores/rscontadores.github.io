@@ -200,7 +200,7 @@ footer p {
   }
 }
 
-/* ESTILOS PARA A SEÇÃO DE DIFERENCIAIS - ATUALIZADO */
+/* ESTILOS PARA A SEÇÃO DE DIFERENCIAIS */
 .diferenciais-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -210,16 +210,16 @@ footer p {
 }
 
 .diferencial-item {
-    background-color: #f8f9fa; /* Fundo cinza claro, igual aos serviços */
-    padding: 25px 20px; /* Espaçamento interno */
-    border-radius: 8px; /* Bordas arredondadas */
-    border-top: 4px solid #2a9d8f; /* Borda de destaque no topo */
-    transition: transform 0.3s, box-shadow 0.3s; /* Animação suave */
+    background-color: #f8f9fa;
+    padding: 25px 20px;
+    border-radius: 8px;
+    border-top: 4px solid #2a9d8f;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .diferencial-item:hover {
-    transform: translateY(-5px); /* Efeito de "flutuar" */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Sombra mais pronunciada */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .diferencial-item i {
@@ -231,4 +231,67 @@ footer p {
 .diferencial-item h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
+}
+
+/* NOVO: Estilos para a Seção de Calculadoras */
+.calculadoras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+#calculadoras h2, #diferenciais h2 {
+    text-align: center;
+}
+
+.calculadora-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.calculadora-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.calculadora-item i {
+    font-size: 3em;
+    color: #2a9d8f;
+    margin-bottom: 15px;
+}
+
+.calculadora-item h3 {
+    margin-bottom: 15px;
+}
+
+.calculadora-item p {
+    font-size: 0.95em;
+    color: #555;
+    flex-grow: 1; 
+    margin-bottom: 20px;
+}
+
+.btn-acessar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1d3557;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-acessar:hover {
+    background-color: #2c3e50;
+    color: #fff;
+    text-decoration: none;
 }
